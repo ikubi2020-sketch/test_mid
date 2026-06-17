@@ -5,7 +5,6 @@ from utils.utils_file import *
 class AgentDB:
     def create_agent(data):
         logger.info("active func | create_agent |")
-        logger.info("active func |  |")
         param = (data["name"], data["specialty"], data["is_active"], data["completed_missions"], data["failed_missions"], data["agent_rank"])
         query = "insert into agents (name, specialty, is_active, completed_missions, failed_missions, agent_rank) values(%s, %s, %s, %s, %s, %s);"
         run_query_dml(query, param)
@@ -13,7 +12,7 @@ class AgentDB:
     
     def get_all_agent():
         logger.info("active func | get_all_agent |")
-        query = "select name from agent;"
+        query = "select * from agent;"
         all_agent = run_query_fetchall(query)
         return all_agent
     
@@ -66,8 +65,8 @@ class AgentDB:
         agent_performance["completed_missions"] = completed_missions
         agent_performance["failed_missions"] = failed_missions
         agent_performance["success_rate"] = (completed_missions / total) * 100 
-        
         return agent_performance
+    
     def agents_active_count():
         logger.info("active func | agents_active_count |")
         query = "select count(is_active) from agent where is_active = true"
