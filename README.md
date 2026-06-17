@@ -10,7 +10,7 @@ https://github.com/ikubi2020-sketch/test_mid.git
 pip install -r requirements.txt
 
 
-program perpes :
+program purpose :
 
 the program is managing a unit name ShadowNet . 
 the unit has agent un a different levels and missions in different levels .
@@ -21,7 +21,7 @@ using the system we can get all details on any  mission or agent , and make sure
 
 
 
-stractor of files :
+stractur of files :
 (basic)
 
 intelligence-task-manager  

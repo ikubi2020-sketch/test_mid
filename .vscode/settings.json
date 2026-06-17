@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
+        "sucssefuly",
         "VARCHAR",
         "venv"
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
