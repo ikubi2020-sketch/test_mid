@@ -1,6 +1,8 @@
 from logs.logs_file import logger
 from utils.utils_file import *
 
+
+
 class MissionDB:
     def create_missions(self,data):
         logger.info("active func | create_missions |")
@@ -31,15 +33,15 @@ class MissionDB:
         logger.info("active func | assign_mission |")
         valid_assignment(m_id, a_id)
         param = a_id, m_id
-        query = "updated missions set assigned_agent_id = %s where id = %s;"
+        query = "update missions set assigned_agent_id = %s where id = %s;"
         run_query_dml(query, param)
         logger.info("mission was assign to agent")
         return "mission was assign well"
     
     def update_mission_status(self, id, status):
         logger.info("active func | update_mission_status |")
-        param =  status, id
-        query = "updated missions set status = %s where id = %s;"
+        param = status, id
+        query = "update missions set status = %s where id = %s;"
         run_query_dml(query, param)
         logger.info(f"mission {id} updated status to {status}")
         return "status update well"
@@ -62,10 +64,11 @@ class MissionDB:
     def count_by_status(self, status):
         logger.info("active func | count_by_status |")
         param = tuple(status)
-        query = "select count(*) from  missions where status = %s;"
+        query = "select count(*) as count_status from  missions where status = %s;"
         num_of_missions = run_query_fetchone(query, param)
         logger.info(f"return count mission by status {status}")
-        return num_of_missions
+        count_final = num_of_missions["count_status"]
+        return count_final
 
     def count_open_missions(self):
         logger.info("active func | count_open_missions |")
@@ -83,10 +86,27 @@ class MissionDB:
     
     def get_top_agent(self):
         logger.info("active func | get_top_agent |")
-        query_1 = "select max(completed_missions) from agents"
-        max_completed = run_query_fetchone(query_1)
+        query_1 = "select max(completed_missions) as top from agents"
+        max_completed = run_query_fetchone(query_1["top"])
         max_completed_t = tuple(max_completed)
         query_2 = "select agent from agents where completed_missions = %s;"
         top_agent = run_query_fetchone(query_2, max_completed_t)
         logger.info("return top agent")
         return top_agent
+    
+    def all_by_status(self):
+        all_missions_by_status = {}
+        a=MissionDB()
+        new =a.count_by_status("new")
+        assign =a.count_by_status("assign")
+        in_progress = a.count_by_status("in_progress")
+        completed =a.count_by_status("completed")
+        failed = a.count_by_status("failed")
+        canceled = a.count_by_status("canceled")
+        all_missions_by_status["new"] = new
+        all_missions_by_status["assign"] = assign
+        all_missions_by_status["in_progress"] = in_progress
+        all_missions_by_status["completed"] = completed
+        all_missions_by_status["failed"] = failed
+        all_missions_by_status["canceled"] = canceled
+        return all_missions_by_status

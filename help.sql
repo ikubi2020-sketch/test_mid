@@ -1,1 +1,0 @@
-create table if not exists missions( id int primary key auto_increment, title varchar(100), description text, location varchar(255), difficulty int, importance int, status varchar(30) default 'new', risk_level varchar(50), assigned_agent_id int default null);

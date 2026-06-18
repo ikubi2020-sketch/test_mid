@@ -2,7 +2,9 @@ from logs.logs_file import logger
 from fastapi import APIRouter
 from utils.utils_file import *
 from database.mission_db import MissionDB
+from database.agent_db import AgentDB
 
+class_agent = AgentDB()
 class_missions = MissionDB()
 
 route = APIRouter(prefix="/missions", tags=["missions"])
@@ -31,13 +33,14 @@ def assign_mission_to_agent(mission_id, agent_id):
 
 @route.put("/{id}/start")
 def start_mission(id):
+    logger.info("start func route")
     result_start = class_missions.update_mission_status(id, "in_progress")
     return {"status" :200 , "result": result_start}
 
 @route.put("/{id}/complete")
 def mission_complete(id):
-    complete = class_missions.update_mission_status(id, "completed")
-    return {"status" :200 , "result": complete}
+    mission_complete = class_missions.update_mission_status(id, "completed")
+    return {"status" :200 , "result": mission_complete}
 
 @route.put("/{id}/fail")
 def mission_fail(id):

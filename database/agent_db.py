@@ -26,7 +26,7 @@ class AgentDB:
     def update_agent(self, id, data):
         logger.info("active func | update_agent |")
         param = (data["name"], data["specialty"], data["is_active"], data["completed_missions"], data["failed_missions"], data["agent_rank"], id)
-        query = "update agents set  (name = %s specialty = %s, is_active = %s, completed_missions= %s failed_missions = %s agent_rank = %s) where id = %s;"
+        query = "update agents set name = %s, specialty = %s, is_active = %s, completed_missions= %s, failed_missions = %s, agent_rank = %s where id = %s;"
         run_query_dml(query, param)
         return "agent was updated"
     
@@ -55,20 +55,20 @@ class AgentDB:
         logger.info("active func | get_agent_performance |")
         agent_performance = {}
         param = tuple(id)
-        query_1 = "select count(assigned_agent_id) from missions where assigned_agent_id = %s;"
-        query_2 = "select completed_missions from agents where id = %s;"
-        query_3 = "select failed_missions from agents where id = %s;"
+        query_1 = "select count(assigned_agent_id) as total from missions where assigned_agent_id = %s;"
+        query_2 = "select completed_missions as complete  from agents where id = %s;"
+        query_3 = "select failed_missions as failed from agents where id = %s;"
         total = run_query_fetchone(query_1, param)
         completed_missions = run_query_fetchone(query_2, param)
         failed_missions = run_query_fetchone(query_3, param)
         try :
-            agent_performance["total"] = total
-            agent_performance["completed_missions"] = completed_missions
-            agent_performance["failed_missions"] = failed_missions
-            if total == 0:
+            agent_performance["total"] = total["total"]
+            agent_performance["completed_missions"] = completed_missions["complete"]
+            agent_performance["failed_missions"] = failed_missions["failed"]
+            if  agent_performance["total"]== 0:
                 agent_performance["success_rate"] = 0
             else:
-                agent_performance["success_rate"] = (completed_missions / total) * 100 
+                agent_performance["success_rate"] = (agent_performance["completed_missions"] /agent_performance["total"]) * 100 
         except Exception as e:
             logger.error(f"reach error {e}")
             raise HTTPException (status_code = 400, detail={"message" : f"reach error {e}" })

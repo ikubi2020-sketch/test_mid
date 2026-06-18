@@ -115,3 +115,181 @@
 2026-06-18 12:43:09,590 | INFO | active func | run_query_fetchone |
 2026-06-18 12:43:09,593 | INFO | active func | run_query_fetchone |
 2026-06-18 12:43:09,595 | INFO | active func | run_query_fetchone |
+2026-06-18 14:49:43,700 | INFO | active func | get_agent_performance |
+2026-06-18 14:49:43,703 | INFO | active func | run_query_fetchone |
+2026-06-18 14:49:44,197 | INFO | active func | run_query_fetchone |
+2026-06-18 14:49:44,264 | INFO | active func | run_query_fetchone |
+2026-06-18 14:49:44,291 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 14:50:49,490 | INFO | active func | update_agent |
+2026-06-18 14:50:49,490 | INFO | active func | run_query_dml |
+2026-06-18 14:50:49,494 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(name = 'eli' specialty = 'anything', is_active = True, completed_missions= 0 fa' at line 1
+2026-06-18 14:52:20,838 | INFO | active func | update_agent |
+2026-06-18 14:52:20,838 | INFO | active func | run_query_dml |
+2026-06-18 14:52:20,861 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(name = 'asd', specialty = 'qwe', is_active = True, completed_missions= 0, faile' at line 1
+2026-06-18 14:56:11,573 | INFO | active func | update_agent |
+2026-06-18 14:56:11,574 | INFO | active func | run_query_dml |
+2026-06-18 14:56:34,197 | INFO | active func | get_agent_performance |
+2026-06-18 14:56:34,197 | INFO | active func | run_query_fetchone |
+2026-06-18 14:56:34,200 | INFO | active func | run_query_fetchone |
+2026-06-18 14:56:34,201 | INFO | active func | run_query_fetchone |
+2026-06-18 14:56:34,203 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 15:01:56,502 | INFO | active func | get_agent_performance |
+2026-06-18 15:01:56,503 | INFO | active func | run_query_fetchone |
+2026-06-18 15:01:56,559 | INFO | active func | run_query_fetchone |
+2026-06-18 15:01:56,563 | INFO | active func | run_query_fetchone |
+2026-06-18 15:01:56,567 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 15:03:06,961 | INFO | active func | get_agent_performance |
+2026-06-18 15:03:06,962 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:06,964 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:06,970 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:06,981 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 15:03:44,736 | INFO | active func | get_agent_performance |
+2026-06-18 15:03:44,737 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:44,786 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:44,789 | INFO | active func | run_query_fetchone |
+2026-06-18 15:03:44,792 | ERROR | reach error int() argument must be a string, a bytes-like object or a real number, not 'dict'
+2026-06-18 15:04:34,284 | INFO | active func | get_agent_performance |
+2026-06-18 15:04:34,284 | INFO | active func | run_query_fetchone |
+2026-06-18 15:04:34,305 | INFO | active func | run_query_fetchone |
+2026-06-18 15:04:34,307 | INFO | active func | run_query_fetchone |
+2026-06-18 15:04:34,308 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 15:05:41,881 | INFO | active func | get_agent_performance |
+2026-06-18 15:05:41,882 | INFO | active func | run_query_fetchone |
+2026-06-18 15:05:41,944 | INFO | active func | run_query_fetchone |
+2026-06-18 15:05:41,948 | INFO | active func | run_query_fetchone |
+2026-06-18 15:05:41,951 | ERROR | reach error unsupported operand type(s) for /: 'dict_values' and 'dict_values'
+2026-06-18 15:06:03,212 | INFO | active func | get_agent_performance |
+2026-06-18 15:06:03,214 | INFO | active func | run_query_fetchone |
+2026-06-18 15:06:03,273 | INFO | active func | run_query_fetchone |
+2026-06-18 15:06:03,278 | INFO | active func | run_query_fetchone |
+2026-06-18 15:06:03,280 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 15:07:11,750 | INFO | active func | get_agent_performance |
+2026-06-18 15:07:11,751 | INFO | active func | run_query_fetchone |
+2026-06-18 15:07:11,811 | INFO | active func | run_query_fetchone |
+2026-06-18 15:07:11,815 | INFO | active func | run_query_fetchone |
+2026-06-18 15:07:11,817 | ERROR | reach error unsupported operand type(s) for /: 'dict_values' and 'dict_values'
+2026-06-18 15:09:35,249 | INFO | active func | assign_mission |
+2026-06-18 15:09:35,249 | INFO | checking validation
+2026-06-18 15:09:35,249 | INFO | active func | run_query_fetchone |
+2026-06-18 15:09:35,268 | INFO | active func | run_query_fetchone |
+2026-06-18 15:09:35,270 | INFO | active func | run_query_fetchone |
+2026-06-18 15:10:23,193 | INFO | active func | assign_mission |
+2026-06-18 15:10:23,193 | INFO | checking validation
+2026-06-18 15:10:23,193 | INFO | active func | run_query_fetchone |
+2026-06-18 15:10:23,213 | INFO | active func | run_query_fetchone |
+2026-06-18 15:10:23,214 | INFO | active func | run_query_fetchone |
+2026-06-18 15:13:43,379 | INFO | active func | assign_mission |
+2026-06-18 15:13:43,379 | INFO | checking validation
+2026-06-18 15:13:43,379 | INFO | active func | run_query_fetchone |
+2026-06-18 15:13:43,399 | INFO | active func | run_query_fetchone |
+2026-06-18 15:13:43,401 | INFO | active func | run_query_fetchone |
+2026-06-18 15:14:41,990 | INFO | active func | assign_mission |
+2026-06-18 15:14:41,990 | INFO | checking validation
+2026-06-18 15:14:41,991 | INFO | active func | run_query_fetchone |
+2026-06-18 15:14:42,010 | INFO | active func | run_query_fetchone |
+2026-06-18 15:14:42,012 | INFO | active func | run_query_fetchone |
+2026-06-18 15:14:42,013 | ERROR | reach error '>=' not supported between instances of 'dict' and 'int'
+2026-06-18 15:16:30,492 | INFO | active func | assign_mission |
+2026-06-18 15:16:30,493 | INFO | checking validation
+2026-06-18 15:16:30,493 | INFO | active func | run_query_fetchone |
+2026-06-18 15:16:30,528 | INFO | active func | run_query_fetchone |
+2026-06-18 15:16:30,530 | INFO | active func | run_query_fetchone |
+2026-06-18 15:16:30,532 | ERROR | Mission not available
+2026-06-18 15:16:30,532 | ERROR | reach error 400: {'error': 'Mission not available'}
+2026-06-18 15:19:04,134 | INFO | active func | assign_mission |
+2026-06-18 15:19:04,135 | INFO | checking validation
+2026-06-18 15:19:04,136 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:04,197 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:04,201 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:04,205 | ERROR | Mission not available
+2026-06-18 15:19:04,206 | ERROR | reach error 400: {'error': 'Mission not available'}
+2026-06-18 15:19:24,493 | INFO | active func | assign_mission |
+2026-06-18 15:19:24,494 | INFO | checking validation
+2026-06-18 15:19:24,495 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:24,544 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:24,545 | INFO | active func | run_query_fetchone |
+2026-06-18 15:19:24,548 | ERROR | reach error '>=' not supported between instances of 'dict_values' and 'int'
+2026-06-18 15:21:02,184 | INFO | active func | assign_mission |
+2026-06-18 15:21:02,185 | INFO | checking validation
+2026-06-18 15:21:02,186 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:02,245 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:02,249 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:02,250 | ERROR | Mission not available
+2026-06-18 15:21:02,250 | ERROR | reach error 400: {'error': 'Mission not available'}
+2026-06-18 15:21:17,224 | INFO | active func | assign_mission |
+2026-06-18 15:21:17,225 | INFO | checking validation
+2026-06-18 15:21:17,225 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:17,285 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:17,290 | INFO | active func | run_query_fetchone |
+2026-06-18 15:21:17,294 | ERROR | reach error 'missions'
+2026-06-18 15:22:20,856 | INFO | active func | assign_mission |
+2026-06-18 15:22:20,857 | INFO | checking validation
+2026-06-18 15:22:20,857 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:20,907 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:20,912 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:20,916 | ERROR | Mission not available
+2026-06-18 15:22:20,918 | ERROR | reach error 400: {'error': 'Mission not available'}
+2026-06-18 15:22:53,437 | INFO | active func | assign_mission |
+2026-06-18 15:22:53,438 | INFO | checking validation
+2026-06-18 15:22:53,438 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:53,487 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:53,489 | INFO | active func | run_query_fetchone |
+2026-06-18 15:22:53,493 | ERROR | reach error 'missions'
+2026-06-18 15:28:15,806 | INFO | active func | update_mission_status |
+2026-06-18 15:28:15,807 | INFO | active func | run_query_dml |
+2026-06-18 15:28:15,860 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress' where id = '1'' at line 1
+2026-06-18 15:32:59,017 | INFO | active func | update_mission_status |
+2026-06-18 15:32:59,017 | INFO | active func | run_query_dml |
+2026-06-18 15:32:59,020 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress' where id = '1'' at line 1
+2026-06-18 15:34:35,029 | INFO | active func | update_mission_status |
+2026-06-18 15:34:35,030 | INFO | active func | run_query_dml |
+2026-06-18 15:34:35,086 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress', where id = '1'' at line 1
+2026-06-18 15:39:31,960 | INFO | active func | update_mission_status |
+2026-06-18 15:40:26,892 | INFO | active func | update_mission_status |
+2026-06-18 15:45:14,233 | INFO | active func | get_agent_performance |
+2026-06-18 15:45:14,235 | INFO | active func | run_query_fetchone |
+2026-06-18 15:45:14,285 | INFO | active func | run_query_fetchone |
+2026-06-18 15:45:14,287 | INFO | active func | run_query_fetchone |
+2026-06-18 15:45:14,290 | ERROR | reach error division by zero
+2026-06-18 15:46:15,327 | INFO | active func | get_agent_performance |
+2026-06-18 15:46:15,328 | INFO | active func | run_query_fetchone |
+2026-06-18 15:46:15,353 | INFO | active func | run_query_fetchone |
+2026-06-18 15:46:15,354 | INFO | active func | run_query_fetchone |
+2026-06-18 16:01:59,422 | INFO | active func | update_mission_status |
+2026-06-18 16:02:53,337 | INFO | active func | update_mission_status |
+2026-06-18 16:05:44,932 | INFO | active func | update_mission_status |
+2026-06-18 16:06:32,881 | INFO | active func | update_mission_status |
+2026-06-18 16:07:09,248 | INFO | active func | update_mission_status |
+2026-06-18 16:07:30,061 | INFO | active func | update_mission_status |
+2026-06-18 16:07:40,170 | INFO | active func | update_mission_status |
+2026-06-18 16:08:48,068 | INFO | active func | update_mission_status |
+2026-06-18 16:09:03,280 | INFO | active func | update_mission_status |
+2026-06-18 16:09:20,953 | INFO | active func | update_mission_status |
+2026-06-18 16:09:57,805 | INFO | start func route
+2026-06-18 16:09:57,806 | INFO | active func | update_mission_status |
+2026-06-18 16:10:52,370 | INFO | start func route
+2026-06-18 16:10:52,372 | INFO | active func | update_mission_status |
+2026-06-18 16:10:52,372 | INFO | active func | run_query_dml |
+2026-06-18 16:10:52,444 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress', where id = '1'' at line 1
+2026-06-18 16:11:29,853 | INFO | start func route
+2026-06-18 16:11:29,854 | INFO | active func | update_mission_status |
+2026-06-18 16:11:29,854 | INFO | active func | run_query_dml |
+2026-06-18 16:11:29,904 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress' where id = '1'' at line 1
+2026-06-18 16:15:38,634 | INFO | start func route
+2026-06-18 16:15:38,635 | INFO | active func | update_mission_status |
+2026-06-18 16:15:38,635 | INFO | active func | run_query_dml |
+2026-06-18 16:15:38,678 | ERROR | reach error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updated missions set status = 'in_progress' where id = '1'' at line 1
+2026-06-18 16:20:26,212 | INFO | start func route
+2026-06-18 16:20:26,213 | INFO | active func | update_mission_status |
+2026-06-18 16:20:26,214 | INFO | active func | run_query_dml |
+2026-06-18 16:20:26,289 | INFO | mission 1 updated status to in_progress
+2026-06-18 16:21:43,845 | INFO | active func | assign_mission |
+2026-06-18 16:21:43,846 | INFO | checking validation
+2026-06-18 16:21:43,847 | INFO | active func | run_query_fetchone |
+2026-06-18 16:21:43,892 | INFO | active func | run_query_fetchone |
+2026-06-18 16:21:43,894 | INFO | active func | run_query_fetchone |
+2026-06-18 16:21:43,897 | ERROR | Mission not available
+2026-06-18 16:21:43,897 | ERROR | reach error 400: {'error': 'Mission not available'}
+2026-06-18 16:37:14,486 | INFO | active func | count_by_status |
+2026-06-18 16:37:14,488 | INFO | active func | run_query_fetchone |
+2026-06-18 16:37:14,522 | ERROR | reach error Not all parameters were used in the SQL statement
