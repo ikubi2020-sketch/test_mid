@@ -33,8 +33,9 @@ intelligence-task-manager
 ├── requirements.txt
 └── .gitignore
 utils
-    logs
     utils_file
+logs
+    app.log
 
 
 intelligence-task-manager  = directory ::: the directory that hold all the project   
@@ -45,8 +46,10 @@ agent_db = file ::: hold interaction with the database when it comes to the runn
 mission_db = file ::: hold interaction with the database when it comes to the running details of missions
 
 utils = directory  ::: hold serves function and logger
-logs = file ::: hold connection to the logger  
 utils_file = file ::: holds all validation and run_query functions and more helping  function
+
+logs directory ::: hold logger
+logs_file = file ::: hold connection to the logger  
 
 README = file ::: this file . hold explanations on the program
 

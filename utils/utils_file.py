@@ -75,7 +75,7 @@ class mission(BaseModel):
 
 
 def risk_cumulation(data):
-    risk = data["difficulty"] * 2 = data["importance"]
+    risk = data["difficulty"] * 2 + data["importance"]
     if risk < 10:
         risk = "low"
     elif risk < 17:

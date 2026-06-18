@@ -1,5 +1,5 @@
 
-from utils.logs import logger
+from logs.logs_file import logger
 from utils.utils_file import *
 
 class AgentDB:

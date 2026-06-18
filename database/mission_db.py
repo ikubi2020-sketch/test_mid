@@ -1,11 +1,12 @@
-from utils.logs import logger
+from logs.logs_file import logger
 from utils.utils_file import *
 
 class MissionDB:
     def create_missions(data):
         logger.info("active func | create_missions |")
-        param = (data["title"], data["description"], data["location"], data["difficulty"], data["importance"], data["status"], data["risk_level"], data["assigned_agent_id"])
-        query = "insert into missions (title, description, location, difficulty, importance, status, risk_level, assigned_agent_id);"
+        risk_level = risk_cumulation(data)
+        param = (data["title"], data["description"], data["location"], data["difficulty"], data["importance"], data["status"], risk_level)
+        query = "insert into missions (title, description, location, difficulty, importance, status, risk_level);"
         run_query_dml(query, param)
         logger.info("sucssefuly added mission")
         return ("sucssefuly added mission")
@@ -19,7 +20,6 @@ class MissionDB:
     
     def get_mission_by_id(id):
         logger.info("active func | get_mission_by_id |")
-        logger.info("active func | get_mission_by_id |")
         param = tuple(id)
         query = "select * from missions where id = %s;"
         mission = run_query_fetchone(query, param)
@@ -28,6 +28,7 @@ class MissionDB:
 
     def assign_mission(m_id, a_id):
         logger.info("active func | assign_mission |")
+        valid_assignment(m_id, a_id)
         param = a_id, m_id
         query = "updated missions set assigned_agent_id = %s where id = %s;"
         run_query_dml(query, param)
