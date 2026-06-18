@@ -33,7 +33,7 @@ def get_performance(id):
     return {"status" :200 , "result": agent_performance}
 
 @route.put("/{id}")
-def update_agent(body : agent):
+def update_agent(id : int, body : agent):
     data = body.model_dump()
     result_update = class_agents.update_agent(id, data)
     return {"status" :200 , "result": result_update}

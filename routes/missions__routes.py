@@ -24,24 +24,30 @@ def get_mission_by_agent_id_r(id):
     my_mission = class_missions.get_mission_by_id(id)
     return {"status" :200 , "result": my_mission}
 
-@route.put("/{id}/assign/{agent_id}")
-def assign_mission_to_agent(id, agent_id):
-    assignment_result = class_missions.assign_mission(id, agent_id)
+@route.put("/{mission_id}/assign/{agent_id}")
+def assign_mission_to_agent(mission_id, agent_id):
+    assignment_result = class_missions.assign_mission(mission_id, agent_id)
     return {"status" :200 , "result": assignment_result}
 
 @route.put("/{id}/start")
 def start_mission(id):
-    pass
+    result_start = class_missions.update_mission_status(id, "in_progress")
+    return {"status" :200 , "result": result_start}
 
 @route.put("/{id}/complete")
 def mission_complete(id):
-    pass
+    complete = class_missions.update_mission_status(id, "completed")
+    return {"status" :200 , "result": complete}
 
 @route.put("/{id}/fail")
 def mission_fail(id):
-    pass
+    fail = class_missions.update_mission_status(id, "failed")
+    return {"status" :200 , "result": fail}
 
 @route.put("/{id}/cancel")
 def mission_cancel(id):
-    pass
+    canceled = class_missions.update_mission_status(id, "canceled")
+    return {"status" :200 , "result": canceled}
+
+
 
