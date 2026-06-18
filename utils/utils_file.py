@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 import mysql.connector
-from utils.logs import logger
+from logs.logs_file import logger
 from database.db_connection import DB_connection
 from typing import Literal
 from pydantic import BaseModel,  Field
@@ -70,7 +70,50 @@ class mission(BaseModel):
     difficulty : int = Field(ge=1, le=10)
     importance : int = Field(ge=1, le=10)
     status : str = Field(default="new")
-    risk_level : str = Field(max_length=30)
     assigned_agent_id : str =Field(default=None)
+
+
+
+def risk_cumulation(data):
+    risk = data["difficulty"] * 2 = data["importance"]
+    if risk < 10:
+        risk = "low"
+    elif risk < 17:
+        risk = "medium"
+    elif risk < 24:
+        risk = "high"
+    else:
+        risk = "critical"
+    return risk
+
+
+def valid_assignment(m_id, a_id):
+    param_1 = tuple(a_id)
+    query_1 = "select * from agents where id = %s"
+    the_agent = run_query_fetchone(query_1, param_1)
+    param_2 = tuple(m_id)
+    query_2 = "select * from missions where id = %s"
+    the_mission = run_query_fetchone(query_2, param_2)
+    query_3 ="select count(*) from missions where assigned_agent_id = %s"
+    missions_count = run_query_fetchone(query_3, param_1)
+    if the_agent == None:
+         raise HTTPException(status_code=404 , detail={"error": "agent not found"})
+    if the_mission == None:
+        raise HTTPException(status_code=404 , detail={"error": "mission not found"})
+    if the_mission["risk_level"] == "critical" and the_agent["agent_rank"] != "commander":
+        raise HTTPException(status_code=400 , detail={"error": "Only Commander can handle critical missions"})
+    if the_mission["status"] != "new":
+        raise HTTPException(status_code=400 , detail={"error":"Mission not available"})
+    if the_agent["is_active"] != True:
+        raise HTTPException(status_code=400 , detail={"error":"Agent is not active"})
+    if missions_count >= 3:
+        raise HTTPException(status_code=400 , detail={"error":"Agent has too many missions"})
+    
+
+
+
+
+
+
 
 
