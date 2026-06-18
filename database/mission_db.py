@@ -95,6 +95,7 @@ class MissionDB:
         return top_agent
     
     def all_by_status(self):
+        logger.info("active func | all_by_status |")
         all_missions_by_status = {}
         a=MissionDB()
         new =a.count_by_status("new")
@@ -109,4 +110,5 @@ class MissionDB:
         all_missions_by_status["completed"] = completed
         all_missions_by_status["failed"] = failed
         all_missions_by_status["canceled"] = canceled
+        logger.info("sent out all missions status")
         return all_missions_by_status
