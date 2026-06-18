@@ -7,7 +7,8 @@ class DB_connection:
         self.config = {
             "host" : "localhost",
             "port" : 3306,
-            "password" : 1234,
+            "user" : "root",
+            "password" : "1234",
             "database" : "Intelligence_db"
             }
         self.connection = None
@@ -18,13 +19,13 @@ class DB_connection:
         else:
             return self.connection
     
-    def create_database():
+    def create_database(self):
         query = "create database  if not exists intelligence_db"
         run_query_dml(query)
         return "database created sucssefuly"
 
     def create_table_agents(self):
-        query = "create table if not exists agents( id int primary key auto_increment, name varchar(70), specialty varchar(255), is_active boolean default True, completed_missions int default 0, failed_missions int default 0, agent_rank varchar(20));"
+        query = "create table if not exists agents(id int primary key auto_increment, name varchar(70), specialty varchar(255), is_active boolean default True, completed_missions int default 0, failed_missions int default 0, agent_rank varchar(20));"
         run_query_dml(query)
         return "table agents created sucssefuly"
     

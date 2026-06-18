@@ -1,0 +1,117 @@
+2026-06-18 11:04:10,133 | INFO | active func | create_agent |
+2026-06-18 11:04:10,134 | INFO | active func | run_query_dml |
+2026-06-18 11:04:10,135 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:05:12,260 | INFO | active func | create_agent |
+2026-06-18 11:05:12,260 | INFO | active func | run_query_dml |
+2026-06-18 11:05:12,261 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:06:56,289 | INFO | active func | create_agent |
+2026-06-18 11:06:56,290 | INFO | active func | run_query_dml |
+2026-06-18 11:06:56,290 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:11:22,864 | INFO | active func | create_agent |
+2026-06-18 11:11:22,865 | INFO | active func | run_query_dml |
+2026-06-18 11:11:22,887 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:24:11,181 | INFO | active func | create_agent |
+2026-06-18 11:24:11,181 | INFO | active func | run_query_dml |
+2026-06-18 11:24:11,182 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:24:31,946 | INFO | active func | create_agent |
+2026-06-18 11:24:31,946 | INFO | active func | run_query_dml |
+2026-06-18 11:24:31,947 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:25:35,028 | INFO | active func | create_agent |
+2026-06-18 11:25:35,028 | INFO | active func | run_query_dml |
+2026-06-18 11:25:35,029 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:25:52,431 | INFO | active func | create_agent |
+2026-06-18 11:25:52,431 | INFO | active func | run_query_dml |
+2026-06-18 11:25:52,437 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:26:37,184 | INFO | active func | create_agent |
+2026-06-18 11:26:37,185 | INFO | active func | run_query_dml |
+2026-06-18 11:26:37,185 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:31:47,709 | INFO | active func | create_agent |
+2026-06-18 11:31:47,709 | INFO | active func | run_query_dml |
+2026-06-18 11:31:47,710 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:34:49,875 | INFO | active func | create_agent |
+2026-06-18 11:34:49,876 | INFO | active func | run_query_dml |
+2026-06-18 11:34:49,877 | ERROR | reach error argument 3 must be str or None, not int
+2026-06-18 11:38:55,895 | INFO | active func | create_agent |
+2026-06-18 11:38:55,896 | INFO | active func | run_query_dml |
+2026-06-18 11:38:56,030 | ERROR | reach error 1045 (28000): Access denied for user 'ODBC'@'172.17.0.1' (using password: YES)
+2026-06-18 11:43:41,602 | INFO | active func | create_agent |
+2026-06-18 11:43:41,602 | INFO | active func | run_query_dml |
+2026-06-18 11:43:41,652 | ERROR | reach error 1045 (28000): Access denied for user 'ODBC'@'172.17.0.1' (using password: YES)
+2026-06-18 11:47:48,206 | INFO | active func | create_agent |
+2026-06-18 11:47:48,207 | INFO | active func | run_query_dml |
+2026-06-18 11:47:48,263 | INFO | past point 1
+2026-06-18 11:47:48,265 | INFO | past point
+2026-06-18 11:48:00,897 | INFO | active func | get_all_agent |
+2026-06-18 11:48:00,903 | INFO | active func | run_query_fetchall |
+2026-06-18 11:48:00,917 | ERROR | reach error 1146 (42S02): Table 'Intelligence_db.agent' doesn't exist
+2026-06-18 11:48:37,610 | INFO | active func | get_all_agent |
+2026-06-18 11:48:37,611 | INFO | active func | run_query_fetchall |
+2026-06-18 11:52:15,834 | INFO | active func | get_agent_by_id |
+2026-06-18 11:52:15,834 | INFO | active func | run_query_fetchone |
+2026-06-18 11:52:15,876 | ERROR | reach error 1146 (42S02): Table 'Intelligence_db.agent' doesn't exist
+2026-06-18 11:53:24,788 | INFO | active func | get_agent_by_id |
+2026-06-18 11:53:24,789 | INFO | active func | run_query_fetchone |
+2026-06-18 11:55:25,121 | INFO | active func | get_agent_performance |
+2026-06-18 11:55:25,124 | INFO | active func | run_query_fetchone |
+2026-06-18 11:55:25,155 | INFO | active func | run_query_fetchone |
+2026-06-18 11:55:25,159 | INFO | active func | run_query_fetchone |
+2026-06-18 11:58:21,844 | INFO | active func | get_agent_performance |
+2026-06-18 11:58:21,845 | INFO | active func | run_query_fetchone |
+2026-06-18 11:58:21,878 | INFO | active func | run_query_fetchone |
+2026-06-18 11:58:21,881 | INFO | active func | run_query_fetchone |
+2026-06-18 11:59:52,662 | INFO | active func | get_agent_performance |
+2026-06-18 11:59:52,662 | INFO | active func | run_query_fetchone |
+2026-06-18 11:59:52,692 | INFO | active func | run_query_fetchone |
+2026-06-18 11:59:52,695 | INFO | active func | run_query_fetchone |
+2026-06-18 11:59:52,697 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 12:06:01,621 | INFO | active func | get_agent_performance |
+2026-06-18 12:06:01,621 | INFO | active func | run_query_fetchone |
+2026-06-18 12:06:01,652 | INFO | active func | run_query_fetchone |
+2026-06-18 12:06:01,656 | INFO | active func | run_query_fetchone |
+2026-06-18 12:06:01,659 | ERROR | reach error unsupported operand type(s) for /: 'dict' and 'dict'
+2026-06-18 12:09:09,780 | INFO | active func | update_agent |
+2026-06-18 12:09:09,780 | INFO | active func | run_query_dml |
+2026-06-18 12:09:09,811 | INFO | past point 1
+2026-06-18 12:09:09,812 | INFO | past point
+2026-06-18 12:09:09,812 | ERROR | reach error Python type builtin_function_or_method cannot be converted
+2026-06-18 12:12:40,779 | INFO | active func | agent_deactivate |
+2026-06-18 12:12:40,780 | INFO | active func | run_query_dml |
+2026-06-18 12:12:40,806 | INFO | past point 1
+2026-06-18 12:12:40,807 | INFO | past point
+2026-06-18 12:17:53,793 | INFO | active func | create_missions |
+2026-06-18 12:18:28,259 | INFO | active func | create_missions |
+2026-06-18 12:27:43,072 | INFO | active func | create_missions |
+2026-06-18 12:27:43,072 | INFO | point
+2026-06-18 12:27:43,072 | INFO | active func | run_query_dml |
+2026-06-18 12:27:43,152 | ERROR | reach error Not all parameters were used in the SQL statement
+2026-06-18 12:29:42,097 | INFO | active func | create_missions |
+2026-06-18 12:29:42,098 | INFO | point
+2026-06-18 12:29:42,098 | INFO | active func | run_query_dml |
+2026-06-18 12:29:42,142 | INFO | sucssefuly added mission
+2026-06-18 12:30:45,959 | INFO | active func | get_all_missions |
+2026-06-18 12:30:45,959 | INFO | active func | run_query_fetchall |
+2026-06-18 12:30:45,980 | INFO | return all agents
+2026-06-18 12:32:04,421 | INFO | active func | get_all_missions |
+2026-06-18 12:32:04,422 | INFO | active func | run_query_fetchall |
+2026-06-18 12:32:04,440 | INFO | return all agents
+2026-06-18 12:38:47,273 | INFO | active func | assign_mission |
+2026-06-18 12:38:47,273 | INFO | active func | run_query_fetchone |
+2026-06-18 12:38:47,296 | INFO | active func | run_query_fetchone |
+2026-06-18 12:38:47,298 | INFO | active func | run_query_fetchone |
+2026-06-18 12:38:47,299 | ERROR | Agent is not active
+2026-06-18 12:40:35,856 | INFO | active func | assign_mission |
+2026-06-18 12:40:35,857 | INFO | active func | run_query_fetchone |
+2026-06-18 12:40:35,881 | INFO | active func | run_query_fetchone |
+2026-06-18 12:40:35,883 | INFO | active func | run_query_fetchone |
+2026-06-18 12:40:35,884 | ERROR | Agent is not active
+2026-06-18 12:42:14,327 | INFO | active func | create_agent |
+2026-06-18 12:42:14,327 | INFO | active func | run_query_dml |
+2026-06-18 12:42:54,174 | INFO | active func | assign_mission |
+2026-06-18 12:42:54,175 | INFO | active func | run_query_fetchone |
+2026-06-18 12:42:54,177 | INFO | active func | run_query_fetchone |
+2026-06-18 12:42:54,179 | INFO | active func | run_query_fetchone |
+2026-06-18 12:42:54,180 | ERROR | mission not found
+2026-06-18 12:43:09,590 | INFO | active func | assign_mission |
+2026-06-18 12:43:09,590 | INFO | active func | run_query_fetchone |
+2026-06-18 12:43:09,593 | INFO | active func | run_query_fetchone |
+2026-06-18 12:43:09,595 | INFO | active func | run_query_fetchone |

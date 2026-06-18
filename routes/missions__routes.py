@@ -1,24 +1,33 @@
 from logs.logs_file import logger
 from fastapi import APIRouter
 from utils.utils_file import *
+from database.mission_db import MissionDB
+
+class_missions = MissionDB()
 
 route = APIRouter(prefix="/missions", tags=["missions"])
 
 @route.post("")
 def create_mission_r(mission : mission):
-    pass
+    new_mission = mission.model_dump()
+    result_creation = class_missions.create_missions(new_mission)
+    return {"status" :200 , "result": result_creation}
+    
 
 @route.get("")
 def get_all_missions_r():
-    
+    all_missions = class_missions.get_all_missions()
+    return {"status" :200 , "result": all_missions}
 
 @route.get("/{id}")
 def get_mission_by_agent_id_r(id):
-    pass
+    my_mission = class_missions.get_mission_by_id(id)
+    return {"status" :200 , "result": my_mission}
 
 @route.put("/{id}/assign/{agent_id}")
-def  assign_mission_to_agent(id, agent_id):
-    pass
+def assign_mission_to_agent(id, agent_id):
+    assignment_result = class_missions.assign_mission(id, agent_id)
+    return {"status" :200 , "result": assignment_result}
 
 @route.put("/{id}/start")
 def start_mission(id):

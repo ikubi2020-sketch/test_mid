@@ -10,37 +10,42 @@ from pydantic import BaseModel,  Field
 class_connection = DB_connection()
 
 def run_query_dml(query, params = None):
+    cursor = None
     try:
         logger.info("active func | run_query_dml |")
         connection = class_connection.create_connection()
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query, params)
         connection.commit()
-        cursor.close()
         return None
     except Exception as e:
         logger.error(f"reach error {e}")
         raise HTTPException (status_code = 400, detail={"message" : f"reach error {e}" })
     finally:
-         cursor.close
+        if cursor is not None:
+            cursor.close
+
 
 
 def run_query_fetchall(query, params = None):
+    cursor = None
     try:
         logger.info("active func | run_query_fetchall |")
         connection = class_connection.create_connection()
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query, params)
         result = cursor.fetchall()
-        cursor.close()
         return result
     except Exception as e:
         logger.error(f"reach error {e}")
         raise HTTPException (status_code = 400, detail={"message" : f"reach error {e}" })
     finally:
-         cursor.close
+        if cursor is not None:
+            cursor.close
+
 
 def run_query_fetchone(query, params = None):
+    cursor = None
     try:
         logger.info("active func | run_query_fetchone |")
         connection = class_connection.create_connection()
@@ -52,7 +57,8 @@ def run_query_fetchone(query, params = None):
         logger.error(f"reach error {e}")
         raise HTTPException (status_code = 400, detail={"message" : f"reach error {e}" })
     finally:
-         cursor.close
+        if cursor is not None:
+            cursor.close
 
 
 class agent(BaseModel):
@@ -70,20 +76,23 @@ class mission(BaseModel):
     difficulty : int = Field(ge=1, le=10)
     importance : int = Field(ge=1, le=10)
     status : str = Field(default="new")
-    assigned_agent_id : str =Field(default=None)
 
 
 
 def risk_cumulation(data):
-    risk = data["difficulty"] * 2 + data["importance"]
-    if risk < 10:
-        risk = "low"
-    elif risk < 17:
-        risk = "medium"
-    elif risk < 24:
-        risk = "high"
-    else:
-        risk = "critical"
+    try:
+        risk = data["difficulty"] * 2 + data["importance"]
+        if risk < 10:
+            risk = "low"
+        elif risk < 17:
+            risk = "medium"
+        elif risk < 24:
+            risk = "high"
+        else:
+            risk = "critical"
+    except Exception as e:
+        logger.error(f"reach error {e}")
+        raise HTTPException (status_code = 400, detail={"message" : f"reach error {e}" })
     return risk
 
 
@@ -97,17 +106,25 @@ def valid_assignment(m_id, a_id):
     query_3 ="select count(*) from missions where assigned_agent_id = %s"
     missions_count = run_query_fetchone(query_3, param_1)
     if the_agent == None:
+         logger.error("agent not found")
          raise HTTPException(status_code=404 , detail={"error": "agent not found"})
     if the_mission == None:
+        logger.error("mission not found")
         raise HTTPException(status_code=404 , detail={"error": "mission not found"})
     if the_mission["risk_level"] == "critical" and the_agent["agent_rank"] != "commander":
+        logger.error("Only Commander can handle critical missions")
         raise HTTPException(status_code=400 , detail={"error": "Only Commander can handle critical missions"})
     if the_mission["status"] != "new":
+        logger.error("Mission not available")
         raise HTTPException(status_code=400 , detail={"error":"Mission not available"})
-    if the_agent["is_active"] != True:
+    if the_agent["is_active"] == False:
+        logger.error("Agent is not active")
         raise HTTPException(status_code=400 , detail={"error":"Agent is not active"})
     if missions_count >= 3:
+        logger.error("Agent has too many missions")
         raise HTTPException(status_code=400 , detail={"error":"Agent has too many missions"})
+    else:
+        logger.info("valid assign")
     
 
 
