@@ -2,7 +2,7 @@ from logs.logs_file import logger
 from fastapi import APIRouter
 from utils.utils_file import *
 
-route = APIRouter(prefix="/missions", tags="missions")
+route = APIRouter(prefix="/missions", tags=["missions"])
 
 @route.post("")
 def create_mission_r(mission : mission):
@@ -10,7 +10,7 @@ def create_mission_r(mission : mission):
 
 @route.get("")
 def get_all_missions_r():
-    pass
+    
 
 @route.get("/{id}")
 def get_mission_by_agent_id_r(id):

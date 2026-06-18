@@ -2,7 +2,7 @@ from logs.logs_file import logger
 from fastapi import APIRouter
 from utils.utils_file import *
 
-route = APIRouter(prefix="/reports", tags="reports")
+route = APIRouter(prefix="/reports", tags=["reports"])
 
 @route.get("/summery")
 def get_summery():
